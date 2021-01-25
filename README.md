@@ -1,8 +1,3 @@
-> ## Viper v2 feedback
-> Viper is heading towards v2 and we would love to hear what _**you**_ would like to see in it. Share your thoughts here: https://forms.gle/R6faU74qPRPAzchZ9
->
-> **Thank you!**
-
 ![Viper](.github/logo.png?raw=true)
 
 [![Mentioned in Awesome Go](https://awesome.re/mentioned-badge-flat.svg)](https://github.com/avelino/awesome-go#configuration)
@@ -77,9 +72,8 @@ Viper uses the following precedence order. Each item takes precedence over the i
  * key/value store
  * default
 
-**Important:** Viper configuration keys are case insensitive.
-There are ongoing discussions about making that optional.
-
+Viper configuration keys are case insensitive by default. They can be made case
+sensitive with `viper.SetKeysCaseSensitive(true)`.
 
 ## Putting Values into Viper
 
@@ -843,17 +837,12 @@ application foundation needs.
 
 Is there a better name for a [commander](http://en.wikipedia.org/wiki/Cobra_Commander)?
 
-### Does Viper support case sensitive keys?
+### Does Viper support case-sensitive keys?
 
-**tl;dr:** No.
+**tl;dr:** Yes.
 
-Viper merges configuration from various sources, many of which are either case insensitive or uses different casing than the rest of the sources (eg. env vars).
-In order to provide the best experience when using multiple sources, the decision has been made to make all keys case insensitive.
-
-There has been several attempts to implement case sensitivity, but unfortunately it's not that trivial. We might take a stab at implementing it in [Viper v2](https://github.com/spf13/viper/issues/772), but despite the initial noise, it does not seem to be requested that much.
-
-You can vote for case sensitivity by filling out this feedback form: https://forms.gle/R6faU74qPRPAzchZ9
-
+Keys are case-insensitive by default. They can be made case-sensitive with
+`viper.SetKeysCaseSensitive(true)`.
 
 ## Troubleshooting
 
