@@ -3,11 +3,11 @@ run:
 
 linters-settings:
     gci:
-        local-prefixes: github.com/spf13/viper
+        local-prefixes: github.com/ava-labs/viper
     golint:
         min-confidence: 0
     goimports:
-        local-prefixes: github.com/spf13/viper
+        local-prefixes: github.com/ava-labs/viper
 
 linters:
     disable-all: true
